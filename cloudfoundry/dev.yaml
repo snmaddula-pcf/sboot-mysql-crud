@@ -1,0 +1,12 @@
+---
+applications:
+- name: sboot-mysql-crud
+  instances: 1
+  memory: 1G
+  path: "../target/sboot-mysql-crud.jar"
+  env:
+      SPRING_PROFILES_ACTIVE : dev 
+  instances: 1
+  memory: 1G
+  routes:
+    - route: sboot-mysql-crud.dev.cfapps.io
