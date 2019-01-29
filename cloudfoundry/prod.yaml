@@ -6,8 +6,10 @@ applications:
   buildpack: java_buildpack
   path: "../target/sboot-mysql-crud.jar"
   env:
-      SPRING_PROFILES_ACTIVE : prod 
+    SPRING_PROFILES_ACTIVE : prod
+    JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: false}' 
   instances: 1
   memory: 1G
   routes:
     - route: sboot-mysql-crud.cfapps.io
+    

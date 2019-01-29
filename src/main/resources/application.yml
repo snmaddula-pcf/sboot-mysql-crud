@@ -1,0 +1,33 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: ${vcap.services.mysql.credentials.jdbcUrl}
+    username: ${vcap.services.mysql.credentials.username}
+    password: ${vcap.services.mysql.credentials.password}
+    
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - info
+        - env
+        - health
+
+swagger: 
+  title: Basic MS App
+  description: This is a basic ms app for demo purpose
+  version: 1.0
+  contact-name: snmaddula
+  contact-url: 
+  contact-email: snmaddula@gmail.com
+    
