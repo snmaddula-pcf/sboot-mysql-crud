@@ -1,13 +1,14 @@
 ---
 applications:
 - name: sboot-mysql-crud
-  instances: 1
-  memory: 1G
+  instances: 2
+  memory: 512MB
+  disk_quota: 512MB
   path: "../target/sboot-mysql-crud.jar"
+  services:
+    - mysql
   env:
     SPRING_PROFILES_ACTIVE : dev
     JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: false}' 
-  instances: 1
-  memory: 1G
   routes:
     - route: sboot-mysql-crud.cfapps.io
