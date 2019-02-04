@@ -5,8 +5,8 @@ applications:
   memory: 1G
   disk_quota: 1G
   path: "../target/sboot-mysql-crud.jar"
-  services:
-    - mysql
+  #services:
+  #  - mysql
   env:
     SPRING_PROFILES_ACTIVE : dev
     JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: false}' 
