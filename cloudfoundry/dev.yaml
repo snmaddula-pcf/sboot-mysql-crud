@@ -1,7 +1,7 @@
 ---
 applications:
 - name: sboot-mysql-crud
-  instances: 1
+  instances: 2
   memory: 1G
   disk_quota: 1G
   path: "../target/sboot-mysql-crud.jar"
